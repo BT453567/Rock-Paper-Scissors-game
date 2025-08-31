@@ -143,11 +143,13 @@ a {
 
 .body {
     background-color: var(--bg-colour);
+    
 }
 
 .main-container {
     min-height: 100vh;
     min-height: 100dvh;
+    overflow: hidden;
 }
 
 .main-container__top {
