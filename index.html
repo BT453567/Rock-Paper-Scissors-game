@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/script.js"></script>
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+</head>
+<body class="body">
+  <main class="main-container flex column space-between">
+    <div class="main-container__top flex column">
+      <div class="header flex space-between">
+        <div class="logo flex">
+          <img src="./images/logo-bonus.svg" alt="">
+        </div>
+        <div class="score-wrapper">
+          <div class="score flex column">
+            <span class="score-text">score</span>
+            <span id="score-value" class="score-value">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- game 1st screen -->
+      <div id="game1" class="game">
+        <div class="game__shape-container">
+          <img src="./images/bg-pentagon.svg" alt="">
+
+          <button class="game__icon-wrapper scissors" data-hand="scissors">
+            <div class="game__icon grid">
+              <img src="./images/icon-scissors.svg" alt="">
+            </div>
+            <div class="game__icon-shadow">
+            </div>
+          </button>
+          
+          <button class="game__icon-wrapper spock" data-hand="spock">
+            <div class="game__icon grid">
+              <img src="./images/icon-spock.svg" alt="">
+            </div>
+            <div class="game__icon-shadow">
+            </div>
+          </button>
+          
+          <button class="game__icon-wrapper paper" data-hand="paper">
+            <div class="game__icon grid">
+              <img src="./images/icon-paper.svg" alt="">
+            </div>
+            <div class="game__icon-shadow">
+            </div>
+          </button>
+
+          <button class="game__icon-wrapper lizard" data-hand="lizard">
+            <div class="game__icon grid">
+              <img src="./images/icon-lizard.svg" alt="">
+            </div>
+            <div class="game__icon-shadow">
+            </div>
+          </button>
+
+           <button class="game__icon-wrapper rock" data-hand="rock">
+            <div class="game__icon grid">
+              <img src="./images/icon-rock.svg" alt="">
+            </div>
+            <div class="game__icon-shadow">
+            </div>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- game 2nd screen -->
+
+      <div id="game2" class="game2 flex hide visibility-hidden">
+
+        <div class="game2__column flex column">
+          <span class="game2__heading">you picked</span>
+          <div id="you-picked" class="game2__you-picked">
+          </div>
+          <span class="game2__heading--mobile">you picked</span>
+        </div>
+        <div class="game2__reveal-winner visibility-hidden">
+        </div>
+
+        <div class="game2__column flex column">
+          <span class="game2__heading">the house picked</span>
+          <div id="house-picked" class="game2__house-picked">
+            <div class="house-picked__pending">
+            </div>
+          </div>
+          <span class="game2__heading--mobile">the house picked</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container__bottom flex">
+      <button id="rules-button" class="rules">
+        <span class="rules-text">rules</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- rules menu popup -->
+
+  <div id="popup-overlay" class="popup-overlay">
+    <div class="rules-menu flex column">
+      <div class="rules-menu__header flex space-between">
+        <h2 class="rules-menu__heading">rules</h2>
+        <button id="rules-close" class="rules-close close-button">
+          <img src="./images/icon-close.svg" alt="">
+        </button>
+      </div>
+      <img src="./images/image-rules-bonus.svg" alt="">
+      <div class="rules-menu__bottom">
+        <button id="rules-close" class="rules-close-mobile close-button">
+          <img src="./images/icon-close.svg" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
